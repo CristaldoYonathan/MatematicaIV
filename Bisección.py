@@ -47,3 +47,5 @@ while tramo >= tolera:
 
 # SALIDA
 print(f"\nLa raíz es: {c:.6f}")
+
+
