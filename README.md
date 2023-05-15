@@ -1,4 +1,4 @@
-# MatematicaIV
+# Mátematica IV
 Algoritmos utilizados en matemática IV
 
 # Método de Bisección
