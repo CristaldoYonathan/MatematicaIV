@@ -17,7 +17,7 @@ b = float(input("Ingrese el valor de b: "))
 tolera = float(input("Ingrese la tolerancia: "))
 
 # Cabecera de la tabla
-print("Iteración |    a    |    b    |    c    |  f(a)   |  f(b)   |  f(c)   |  Tramo")
+print("Iteración |    a    |    b     |    c     |  f(a)    |  f(b)    |   f(c)   |  Tramo")
 
 # PROCEDIMIENTO
 tramo = np.abs(b - a)
@@ -29,8 +29,12 @@ while tramo >= tolera:
     fb = fx(b)
     fc = fx(c)
 
-    cambia = np.sign(fa) * np.sign(fc)
-
+    cambia = fa * fc
+    
+    print(
+        f"{i}        | {a:.6f} | {b:.6f} | {c:.6f} | {fa:.6f} | {fb:.6f} | {fc:.6f} | {tramo:.6f}"
+    )
+    
     if cambia < 0:
         a = a
         b = c
@@ -41,9 +45,7 @@ while tramo >= tolera:
 
     tramo = np.abs(b - a)
     i += 1
-    print(
-        f"{i}        | {a:.6f} | {b:.6f} | {c:.6f} | {fa:.6f} | {fb:.6f} | {fc:.6f} | {tramo:.6f}"
-    )
+    
 
 # SALIDA
 print(f"\nLa raíz es: {c:.6f}")
